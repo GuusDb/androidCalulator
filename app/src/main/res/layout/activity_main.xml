@@ -8,12 +8,12 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/tvInput"
         android:layout_width="match_parent"
         android:layout_height="250dp"
         android:background="@color/teal_200"
         android:padding="10dp"
         android:textSize="48sp"
-        android:text="@string/calcText"
         android:gravity="end|bottom"
         />
 
@@ -54,7 +54,7 @@
             android:id="@+id/btnDivide"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:onClick="onDigit"
+            android:onClick="onOperator"
             android:layout_weight="1"
             android:text="@string/devide"
             tools:ignore="UsingOnClickInXml" />
@@ -97,7 +97,7 @@
             android:id="@+id/btnMultiply"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:onClick="onDigit"
+            android:onClick="onOperator"
             android:layout_weight="1"
             android:text="*"
             tools:ignore="UsingOnClickInXml" />
@@ -140,7 +140,7 @@
             android:id="@+id/btnSubtract"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:onClick="onDigit"
+            android:onClick="onOperator"
             android:layout_weight="1"
             android:text="-"
             tools:ignore="UsingOnClickInXml" />
@@ -153,10 +153,19 @@
         android:layout_weight="1">
         <Button
             android:layout_margin="2dp"
+            android:id="@+id/btnDot"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="onDecimalPoint"
+            android:text="."
+            tools:ignore="UsingOnClickInXml" />
+        <Button
+            android:layout_margin="2dp"
             android:id="@+id/btnZero"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="2"
+            android:layout_weight="1"
             android:onClick="onDigit"
             android:text="0"
             tools:ignore="UsingOnClickInXml" />
@@ -165,7 +174,7 @@
             android:id="@+id/btnClr"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:onClick="onDigit"
+            android:onClick="onClear"
             android:layout_weight="1"
             android:text="@string/clr"
             tools:ignore="UsingOnClickInXml" />
@@ -174,7 +183,7 @@
             android:id="@+id/btnAdd"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:onClick="onDigit"
+            android:onClick="onOperator"
             android:layout_weight="1"
             android:text="+"
             tools:ignore="UsingOnClickInXml" />
@@ -190,7 +199,7 @@
             android:id="@+id/btnEqual"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:onClick="onDigit"
+            android:onClick="onEqual"
             android:layout_weight="1"
             android:text="="
             tools:ignore="UsingOnClickInXml" />
